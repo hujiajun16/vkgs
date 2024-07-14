@@ -78,8 +78,11 @@ class Context::Impl {
     std::vector<const char*> instance_extensions(glfw_extensions,
                                                  glfw_extensions + count);
     instance_extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
-    instance_extensions.push_back(
-        VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
+
+    // ÐÞ¸´Renderdoc×¥Ö¡Bug
+    //instance_extensions.push_back(
+    //    VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
+    
     instance_extensions.push_back(
         VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME);
 
